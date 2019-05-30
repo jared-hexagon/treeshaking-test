@@ -1,0 +1,24 @@
+{
+  "name": "treeshaking-test-module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index",
+  "scripts": {
+    "build": "babel src --out-dir dist/esm"
+  },
+  "files": [
+    "dist",
+    "index.mjs"
+  ],
+  "module": "index.mjs",
+  "sideEffects": false,
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0"
+  }
+}
