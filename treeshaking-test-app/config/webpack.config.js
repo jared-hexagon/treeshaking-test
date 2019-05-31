@@ -118,7 +118,7 @@ module.exports = function(webpackEnv) {
   };
 
   return {
-    mode: 'production', // force this so we know for sure treeshaking enabled
+    mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
     // Stop compilation early in production
     bail: isEnvProduction,
     devtool: isEnvProduction
