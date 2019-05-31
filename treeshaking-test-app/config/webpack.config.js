@@ -26,6 +26,8 @@ const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('react-dev-utils/ForkTsCheckerWebpackPlugin');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
 
+const WebpackDeepScopeAnalysisPlugin = require('webpack-deep-scope-plugin').default;
+
 const postcssNormalize = require('postcss-normalize');
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
@@ -475,6 +477,8 @@ module.exports = function(webpackEnv) {
       ],
     },
     plugins: [
+      new WebpackDeepScopeAnalysisPlugin(),
+      
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(
