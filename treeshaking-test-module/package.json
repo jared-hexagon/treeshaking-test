@@ -4,7 +4,7 @@
   "description": "",
   "main": "index",
   "scripts": {
-    "build": "babel src --out-dir dist/esm"
+    "build": "babel src --out-dir dist/esm --delete-dir-on-start"
   },
   "files": [
     "dist",
